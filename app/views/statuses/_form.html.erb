@@ -1,0 +1,19 @@
+<%= form_for(@status) do |f| %>
+  <% if @status.errors.present? %>
+    <% @status.errors.full_messages.each do |msg| %>
+      <%= msg %>
+      <br>
+    <% end %>
+  <% end %>
+  <br>
+  <%= f.label :status %><br>
+  <%= f.text_area :status %>
+  <br>
+  <%= f.label :user %><br>
+  <%= f.text_field :user %>
+  <br>
+  <%= f.label :likes %><br>
+  <%= f.text_field :likes %>
+  <br>
+  <%= f.submit %>
+<% end %>
